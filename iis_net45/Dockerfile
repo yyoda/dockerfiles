@@ -24,10 +24,6 @@ RUN powershell wget https://download.microsoft.com/download/0/D/5/0D50B63D-EE55-
 RUN msiexec /i C:\Setup\WebDeploy_amd64_ja-JP.msi AGREETOLICENSE=yes ADDLOCAL=ALL /qn
 RUN powershell Start-service MsDepSvc;
 
-# Create develop user
-RUN net user /add develop somepwd
-RUN net localgroup administrators develop /add
-
 # Setup own
 ADD setup.ps1 C:\\Setup
 RUN powershell -NoProfile -Command C:\Setup\setup.ps1

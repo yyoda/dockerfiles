@@ -27,7 +27,7 @@ RUN powershell -NoProfile -Command \
     wget http://go.microsoft.com/fwlink/?LinkId=671743 -OutFile C:\Setup\NDP461-KB3102436-x86-x64-AllOS-ENU.exe; \
     wget https://download.microsoft.com/download/5/9/2/592E5924-46DA-462E-B0E1-28F02B1343CD/NDP461-DevPack-KB3105179-ENU.exe -OutFile C:\Setup\NDP461-DevPack-KB3105179-ENU.exe; \
     wget https://go.microsoft.com/fwlink/?LinkID=827524 -OutFile C:\Setup\NetCoreSDK.exe; \
-    wget https://download.microsoft.com/download/0/D/5/0D50B63D-EE55-4834-8312-89CDEFABDE44/WebDeploy_amd64_ja-JP.msi -OutFile C:\Setup\WebDeploy_amd64_ja-JP.msi; \
+    wget https://download.microsoft.com/download/0/D/5/0D50B63D-EE55-4834-8312-89CDEFABDE44/WebDeploy_amd64_ja-JP.msi -OutFile C:\Setup\WebDeploy_amd64_ja-JP.msi;
     # wget https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe -OutFile C:\Setup\BuildTools_Full.exe; \
 RUN C:\Setup\NDP461-KB3102436-x86-x64-AllOS-ENU.exe /q /norestart /log C:\Setup\NDP461-KB3102436-x86-x64-AllOS-ENU_log.txt
 RUN C:\Setup\NDP461-DevPack-KB3105179-ENU.exe /q /norestart /log C:\Setup\NDP461-DevPack-KB3105179-ENU_log.txt
