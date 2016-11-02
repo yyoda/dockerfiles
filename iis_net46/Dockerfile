@@ -7,7 +7,6 @@ RUN powershell -NoProfile -Command \
     Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WebManagement\Server -Name EnableRemoteManagement -V 1; \
     Set-Service -name WMSVC -StartupType Automatic; \
     Start-service WMSVC; \
-    Add-WindowsFeature NET-Framework-45-ASPNET; \
     Add-WindowsFeature Web-Asp-Net45; \
     Import-module WebAdministration; \
     Stop-WebAppPool -Name DefaultAppPool; \
@@ -28,6 +27,6 @@ RUN powershell Start-service MsDepSvc;
 RUN powershell wget http://download.microsoft.com/download/1/2/2/1225c23d-3599-48c9-a314-f7d631f43241/rtools_setup_x64.exe -OutFile C:\Setup\rtools_setup_x64.exe
 RUN C:\Setup\rtools_setup_x64.exe /q /norestart /log C:\Setup\rtools_setup_x64_log.txt
 
-# Setup own
+# Setup Web sites
 ADD setup.ps1 C:\\Setup
 RUN powershell -NoProfile -Command C:\Setup\setup.ps1

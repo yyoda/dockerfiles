@@ -11,5 +11,9 @@ $webSite.logFile.directory = "C:\IIS\IISLogFiles";
 $webSite | Set-Item;
 
 # Web発行などが必要な場合はユーザを作成しておく必要がある
-# net user /add someuser ******
+# net user /add someuser *******
 # net localgroup administrators develop /add
+
+# リモートデバッガー起動方法
+#cd "C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Remote Debugger\x64"
+#.\msvsmon.exe /nostatus /silent /nosecuritywarn /nofirewallwarn /noclrwarn
