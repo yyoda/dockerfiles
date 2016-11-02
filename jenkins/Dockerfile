@@ -21,5 +21,4 @@ RUN powershell -NoProfile -Command \
     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')); \
     choco install -y git
 
-EXPOSE 8080
 CMD ["/Java/jre1.8.0_91/bin/java.exe", "-jar", "/Jenkins/jenkins.war"]
