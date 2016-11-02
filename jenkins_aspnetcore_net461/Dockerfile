@@ -35,4 +35,6 @@ RUN C:\Setup\NetCoreSDK.exe /q /norestart /log C:\Setup\NetCoreSDK_log.txt
 RUN msiexec /i C:\Setup\WebDeploy_amd64_ja-JP.msi AGREETOLICENSE=yes ADDLOCAL=ALL /qn
 # RUN C:\Setup\BuildTools_Full.exe /q /norestart /log C:\Setup\BuildTools_Full_log.txt
 
+
+EXPOSE 8080
 CMD ["/Java/jre1.8.0_91/bin/java.exe", "-jar", "/Jenkins/jenkins.war"]
