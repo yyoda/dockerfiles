@@ -1,10 +1,5 @@
 FROM microsoft/windowsservercore
 
-RUN net user /add develop password
-RUN net localgroup administrators develop /add
-
-RUN powershell -NoProfile -Command \
-    Add-WindowsFeature FS-FileServer; \
-    Enable-PSRemoting;
+RUN powershell Add-WindowsFeature FS-FileServer;
 
 CMD ["powershell"]
