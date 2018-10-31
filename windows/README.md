@@ -1,7 +1,3 @@
-# About this
-Dockerfile examples for Windows.
-
-
 # for IIS server
 
 ## Included Remote Management
